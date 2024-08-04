@@ -1,0 +1,124 @@
+
+
+
+/* ### USER POPOUTS ### */
+
+
+
+/* avatar decorations */
+img[class^="avatarDecoration"], svg[class^="avatarDecoration"] {
+    visibility: hidden;
+}
+
+/* profile effects */
+div[class^="profileEffects"] {
+    visibility: hidden;
+}
+
+/* unnecessary badges */
+div[aria-label="User Badges"] > 
+    div[aria-label^="HypeSquad"],
+    div[aria-label="Early Supporter"],
+    div[aria-label="Completed a Quest"] {
+        display: none;
+}
+
+/* quick actions */
+div[class^="userPopoutInner"] > div:nth-child(1) {
+    display: none;
+}
+
+/* "Add Note" button */
+div[aria-label="Add Note"] {
+    visibility: hidden;
+}
+
+/* message section */
+div[class*="userProfileInner"] {
+    & > div[class^="body"] {
+        padding-bottom: 16px;
+    }
+    & > footer {
+        display: none;
+    }
+}
+
+/* "View Full Bio" button */
+button[class^="viewFullBio"] {
+    display: none;
+}
+
+/* new status design */
+div[class^="visibleContainer"], div[class^="invisibleContainer"] {
+    display: none;
+}
+
+
+
+/* ### SERVERS AND CHANNELS ### */
+
+
+
+/* unread pills */
+li[class^="containerDefault"] div[class^="unread"] {
+    visibility: hidden;
+}
+
+div[class^="listItem"] div[class^="pill"] {
+    visibility: hidden;
+}
+
+/* activity badges */
+div[class^="upperBadge"] {
+    visibility: hidden;
+}
+
+div[class^="listItem"] use[href$="upper_badge_masks"] {
+    visibility: hidden;
+}
+
+/* "Discover Servers" button */
+div[aria-label="Explore Discoverable Servers"] {
+    display: none;
+}
+
+/* "Create Invite" button */
+div[class^="iconItem"][aria-label="Create Invite"] {
+    display: none !important;
+}
+
+/* server boost bar above the channel list */
+ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
+    display: none;
+}
+
+
+
+/* ### MESSAGE FEED ### */
+
+
+
+/* typing dots */
+div[class^="typingDots"] svg[class^="ellipsis"] {
+    display: none;
+}
+
+
+
+/* ### MISCELLANEOUS ### */
+
+
+
+/* channel toolbar icons */
+div[class^="iconWrapper"][aria-label="Help"],
+div[class^="iconWrapper"][aria-label="Notification Settings"] {
+    display: none;
+}
+
+/* emote menu diversity selector */
+div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
+    margin-right: 0px;
+    & ~ div[class^="diversitySelector"] {
+        display: none;
+    }
+}

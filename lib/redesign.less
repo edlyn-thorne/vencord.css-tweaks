@@ -1,0 +1,44 @@
+
+
+
+/* ### USER POPOUTS ### */
+
+
+
+/* increase description line clamp limit */
+div[class^="descriptionClamp"] {
+    -webkit-line-clamp: 10 !important;
+} 
+
+/* increase rounding on role pills */
+div[class*="role"][class*="pill"],
+div[aria-label="View All Roles"] > div,
+div[aria-label="View Permissions"] > button,
+div[aria-label="Add Role"] > button {
+    border-radius: calc(var(--radius-xs) * 2);
+}
+
+/* condensed form */
+div[class*="userProfileInner"] {
+    padding-bottom: 0px;
+    & > footer {
+        padding-top: 8px;
+    }
+}
+
+/* remove profile badge border */
+div[aria-label="User Badges"] {
+    border: none;
+}
+
+
+
+/* ### MISCELLANEOUS ### */
+
+
+
+/* move text inside of OP and APP tags down */
+span[class^="botText"] {
+    position: relative;
+    top: 1px;
+}

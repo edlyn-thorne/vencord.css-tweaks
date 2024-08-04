@@ -1,109 +1,11 @@
 /**
  * @name CSS Tweaks
- * @version 0.0.2
+ * @version 0.1.0
  * @description A collection of small but useful CSS tweaks.
 **/
 
+/* Unnecessary UI element removal */
+@import "lib/invisible.less";
 
-/* ### Remove all unnecessary elements ### */
-
-
-/* Avatar decorations */
-img[class^="avatarDecoration"], svg[class^="avatarDecoration"] {
-    visibility: hidden;
-}
-
-/* Profile effects  */
-div[class^="profileEffects"] {
-    visibility: hidden;
-}
-
-/* Unnecessary profile badges */
-div[class^="profileBadges"] >
-a[aria-label^="HypeSquad"],
-a[aria-label="Early Supporter"],
-a[aria-label="Completed a Quest"] {
-    display: none;
-} 
-
-/* Channel unread pills */
-li[class^="containerDefault"] div[class^="unread"] {
-    visibility: hidden;
-}
-
-/* Server unread pills */
-div[class^="listItem"] div[class^="pill"] {
-    visibility: hidden;
-}
-
-/* Server activity badges */
-div[class^="upperBadge"] {
-    visibility: hidden;
-}
-
-div[class^="listItem"] use[href$="upper_badge_masks"] {
-    visibility: hidden;
-}
-
-/* Discover server button */
-nav[aria-label="Servers sidebar"] 
-div[class^="scroller"] > div[class^="listItem"]:nth-last-child(2) {
-    visibility: hidden;
-}
-
-/* Remove "Create Invite" button */
-div[class^="iconItem"][aria-label="Create Invite"] {
-    display: none !important;
-}
-
-/* Remove server boost bar at the top of the channel list */
-ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
-    display: none;
-}
-
-/* Typing dots */
-div[class^="typingDots"] svg[class^="ellipsis"] {
-    display: none;
-}
-
-/* Channel toolbar icons */
-div[class^="iconWrapper"][aria-label="Help"],
-div[class^="iconWrapper"][aria-label="Notification Settings"] {
-    display: none;
-}
-
-/* Message and notes sections of profiles  */
-div[class^="userPopout"] > div[class^="scroller"] {
-    & > div[class*="lastSection"] {
-        display: none;
-    }
-    & > div[class^="section"]:has(div[class^="note"]) {
-        display: none;
-    }
-    /* And a bit of padding for perm list */
-    & > div[class*="roles"] {
-        margin-bottom: 8px;
-    }
-}
-
-/* Diversity selector (lol) */
-div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
-    margin-right: 0px;
-    & ~ div[class^="diversitySelector"] {
-        display: none;
-    }
-}
-
-
-/* ### Cosmetic changes ### */
-
-/* Bot tag lowercased */
-span[class^="botText"] {
-    text-transform: lowercase;
-}
-
-/* Line clamp for bios increased up to 10 lines */
-div[class*="lineClamp"] {
-    -webkit-line-clamp: 10 !important;
-}
-
+/* Cosmetic changes */
+@import "lib/redesign.less";
