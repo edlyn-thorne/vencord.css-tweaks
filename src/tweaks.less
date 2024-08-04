@@ -1,6 +1,6 @@
 /**
  * @name CSS Tweaks
- * @version 0.0.1
+ * @version 0.0.2
  * @description A collection of small but useful CSS tweaks.
 **/
 
@@ -8,17 +8,17 @@
 /* ### Remove all unnecessary elements ### */
 
 
-// Avatar decorations
+/* Avatar decorations */
 img[class^="avatarDecoration"], svg[class^="avatarDecoration"] {
     visibility: hidden;
 }
 
-// Profile effects 
+/* Profile effects  */
 div[class^="profileEffects"] {
     visibility: hidden;
 }
 
-// Unnecessary profile badges
+/* Unnecessary profile badges */
 div[class^="profileBadges"] >
 a[aria-label^="HypeSquad"],
 a[aria-label="Early Supporter"],
@@ -26,17 +26,17 @@ a[aria-label="Completed a Quest"] {
     display: none;
 } 
 
-// Channel unread pills
+/* Channel unread pills */
 li[class^="containerDefault"] div[class^="unread"] {
     visibility: hidden;
 }
 
-// Server unread pills
+/* Server unread pills */
 div[class^="listItem"] div[class^="pill"] {
     visibility: hidden;
 }
 
-// Server activity badges
+/* Server activity badges */
 div[class^="upperBadge"] {
     visibility: hidden;
 }
@@ -45,34 +45,34 @@ div[class^="listItem"] use[href$="upper_badge_masks"] {
     visibility: hidden;
 }
 
-// Discover server button
+/* Discover server button */
 nav[aria-label="Servers sidebar"] 
 div[class^="scroller"] > div[class^="listItem"]:nth-last-child(2) {
     visibility: hidden;
 }
 
-// Remove "Create Invite" button
+/* Remove "Create Invite" button */
 div[class^="iconItem"][aria-label="Create Invite"] {
     display: none !important;
 }
 
-// Remove server boost bar at the top of the channel list
+/* Remove server boost bar at the top of the channel list */
 ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
     display: none;
 }
 
-// Typing dots
+/* Typing dots */
 div[class^="typingDots"] svg[class^="ellipsis"] {
     display: none;
 }
 
-// Channel toolbar icons
+/* Channel toolbar icons */
 div[class^="iconWrapper"][aria-label="Help"],
 div[class^="iconWrapper"][aria-label="Notification Settings"] {
     display: none;
 }
 
-// Message and notes sections of profiles 
+/* Message and notes sections of profiles  */
 div[class^="userPopout"] > div[class^="scroller"] {
     & > div[class*="lastSection"] {
         display: none;
@@ -80,13 +80,13 @@ div[class^="userPopout"] > div[class^="scroller"] {
     & > div[class^="section"]:has(div[class^="note"]) {
         display: none;
     }
-    // And a bit of padding for perm list
+    /* And a bit of padding for perm list */
     & > div[class*="roles"] {
         margin-bottom: 8px;
     }
 }
 
-// Diversity selector (lol)
+/* Diversity selector (lol) */
 div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
     margin-right: 0px;
     & ~ div[class^="diversitySelector"] {
@@ -97,27 +97,12 @@ div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
 
 /* ### Cosmetic changes ### */
 
-
-// Custom activity icon size and alignment
-img[class*="hangStatusIcon"][data-type="emoji"] {
-    transform: scale(0.7);
-}
-
-div[class^="icons"]:has(img[class*="hangStatusIcon"][data-type="emoji"]) {
-    position: relative;
-    left: 3px;
-    & div[class^="iconGroup"]:has(div[aria-label="Muted"]) {
-        position: relative;
-        left: 3px;
-    }
-}
-
-// Bot tag lowercased
+/* Bot tag lowercased */
 span[class^="botText"] {
     text-transform: lowercase;
 }
 
-// Line clamp for bios increased up to 10 lines
+/* Line clamp for bios increased up to 10 lines */
 div[class*="lineClamp"] {
     -webkit-line-clamp: 10 !important;
 }
