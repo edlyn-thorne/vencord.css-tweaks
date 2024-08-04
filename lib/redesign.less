@@ -15,8 +15,12 @@ div[class^="descriptionClamp"] {
 div[class*="role"][class*="pill"],
 div[aria-label="View All Roles"] > div,
 div[aria-label="View Permissions"] > button,
-div[aria-label="Add Role"] > button {
-    border-radius: calc(var(--radius-xs) * 2);
+button[aria-label="Add Role"] {
+    border-radius: calc(var(--radius-xs) * 4);
+}
+
+button[aria-label="Add Role"] {
+    aspect-ratio: 1 / 1;
 }
 
 /* condensed form */

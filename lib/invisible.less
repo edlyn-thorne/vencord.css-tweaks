@@ -68,6 +68,15 @@ div[class^="listItem"] div[class^="pill"] {
     visibility: hidden;
 }
 
+/* unread pills server whitelist */
+/*
+    div[class^="listItem"]:has(
+        div[data-list-item-id*="<serverID>"]
+    ) div[class^="pill"] {
+        visibility: visible;
+    }
+*/
+
 /* activity badges */
 div[class^="upperBadge"] {
     visibility: hidden;
