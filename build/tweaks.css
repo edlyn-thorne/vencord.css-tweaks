@@ -1,0 +1,138 @@
+/**
+ * @name CSS Tweaks
+ * @version 1.0.0
+ * @description A collection of small but useful CSS tweaks.
+**/
+/* Unnecessary UI element removal */
+/* ### USER POPOUTS ### */
+/* avatar decorations */
+img[class^="avatarDecoration"],
+svg[class^="avatarDecoration"] {
+  visibility: hidden;
+}
+/* profile effects */
+div[class^="profileEffects"] {
+  visibility: hidden;
+}
+/* unnecessary badges */
+div[aria-label="User Badges"] > div[aria-label^="HypeSquad"],
+div[aria-label="Early Supporter"],
+div[aria-label="Completed a Quest"] {
+  display: none;
+}
+/* quick actions */
+div[class^="userPopoutInner"] > div:nth-child(1) {
+  display: none;
+}
+/* "Add Note" button */
+div[aria-label="Add Note"] {
+  visibility: hidden;
+}
+/* message section */
+div[class*="userProfileInner"] > div[class^="body"] {
+  padding-bottom: 16px;
+}
+div[class*="userProfileInner"] > footer {
+  display: none;
+}
+/* "View Full Bio" button */
+button[class^="viewFullBio"] {
+  display: none;
+}
+/* new status design */
+div[class^="visibleContainer"],
+div[class^="invisibleContainer"] {
+  display: none;
+}
+/* ### SERVERS AND CHANNELS ### */
+/* unread pills */
+li[class^="containerDefault"] div[class^="unread"] {
+  visibility: hidden;
+}
+div[class^="listItem"] div[class^="pill"] {
+  visibility: hidden;
+}
+/* unread pills server whitelist */
+/*
+    div[class^="listItem"]:has(
+        div[data-list-item-id*="<serverID>"]
+    ) div[class^="pill"] {
+        visibility: visible;
+    }
+*/
+/* activity badges */
+div[class^="upperBadge"] {
+  visibility: hidden;
+}
+div[class^="listItem"] use[href$="upper_badge_masks"] {
+  visibility: hidden;
+}
+/* "Discover Servers" button */
+div[aria-label="Explore Discoverable Servers"] {
+  display: none;
+}
+/* "Create Invite" button */
+div[class^="iconItem"][aria-label="Create Invite"] {
+  display: none !important;
+}
+/* server boost bar above the channel list */
+ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
+  display: none;
+}
+/* ### MESSAGE FEED ### */
+/* typing dots */
+div[class^="typingDots"] svg[class^="ellipsis"] {
+  display: none;
+}
+/* ### MISCELLANEOUS ### */
+/* channel toolbar icons */
+div[class^="iconWrapper"][aria-label="Help"],
+div[class^="iconWrapper"][aria-label="Notification Settings"] {
+  display: none;
+}
+/* emote menu diversity selector */
+div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
+  margin-right: 0px;
+}
+div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div[class^="diversitySelector"] {
+  display: none;
+}
+/* Cosmetic changes */
+/* ### USER POPOUTS ### */
+/* increase description line clamp limit */
+div[class^="descriptionClamp"] {
+  -webkit-line-clamp: 10 !important;
+  max-height: unset;
+}
+/* increase rounding on role pills */
+div[class*="role"][class*="pill"],
+div[aria-label="View All Roles"] > div,
+div[aria-label="View Permissions"] > button,
+button[aria-label="Add Role"] {
+  border-radius: calc(var(--radius-xs) * 4);
+}
+button[aria-label="Add Role"] {
+  aspect-ratio: 1 / 1;
+}
+/* condensed form */
+div[class*="userProfileInner"] {
+  padding-bottom: 0px;
+}
+div[class*="userProfileInner"] > footer {
+  padding-top: 8px;
+}
+/* remove profile badge border and background */
+div[aria-label="User Badges"] {
+  border: none;
+  background: none !important;
+}
+/* remove user profile info border */
+div[class*="userProfileInner"] div[class^="body"] > div[class*="overlayBackground"] {
+  border: none !important;
+}
+/* ### MISCELLANEOUS ### */
+/* move text inside of OP and APP tags down */
+span[class^="botText"] {
+  position: relative;
+  top: 1px;
+}
