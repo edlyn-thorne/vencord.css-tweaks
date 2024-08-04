@@ -27,9 +27,16 @@ div[class*="userProfileInner"] {
     }
 }
 
-/* remove profile badge border */
+/* remove profile badge border and background */
 div[aria-label="User Badges"] {
     border: none;
+    background: none !important;
+}
+
+/* remove user profile info border */
+div[class*="userProfileInner"]
+div[class^="body"] > div[class*="overlayBackground"] {
+    border: none !important;
 }
 
 
