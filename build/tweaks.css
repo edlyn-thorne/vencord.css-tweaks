@@ -1,6 +1,6 @@
 /**
  * @name CSS Tweaks
- * @version 1.0.0
+ * @version 1.1.0
  * @description A collection of small but useful CSS tweaks.
 **/
 /* Unnecessary UI element removal */
@@ -79,6 +79,13 @@ div[class^="iconItem"][aria-label="Create Invite"] {
 ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
   display: none;
 }
+/* "Suggested" channel section */
+ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) ~ :not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"])):not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"]) ~ *) {
+  display: none;
+}
+ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) {
+  display: none;
+}
 /* ### MESSAGE FEED ### */
 /* typing dots */
 div[class^="typingDots"] svg[class^="ellipsis"] {
@@ -99,6 +106,8 @@ div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div
 }
 /* Cosmetic changes */
 /* ### USER POPOUTS ### */
+/* old status design (requires enabling it first) */
+/* @import url("https://raw.githubusercontent.com/Bitslayn/RepluggedAddons/main/themes/btw.bitslayn.inlineStatus/raw/main.css"); */
 /* increase description line clamp limit */
 div[class^="descriptionClamp"] {
   -webkit-line-clamp: 10 !important;

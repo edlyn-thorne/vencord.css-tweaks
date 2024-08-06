@@ -69,6 +69,9 @@ div[class^="listItem"] div[class^="pill"] {
 }
 
 /* unread pills server whitelist */
+
+// ew this feels wrong
+
 /*
     div[class^="listItem"]:has(
         div[data-list-item-id*="<serverID>"]
@@ -99,6 +102,29 @@ div[class^="iconItem"][aria-label="Create Invite"] {
 /* server boost bar above the channel list */
 ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
     display: none;
+}
+
+/* "Suggested" channel section */
+
+// very shady because it doesn't actually hook into anything related to said
+// section it just yeets everything between the first and second channel
+// divider
+
+ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) {
+    & div:nth-child(1 of [class^="sectionDivider"]) ~
+    :not(
+        ul[aria-label="Channels"] >
+        div:nth-child(2 of [class^="sectionDivider"])
+    ):not(
+        ul[aria-label="Channels"] >
+        div:nth-child(2 of [class^="sectionDivider"]) ~
+        *
+    ) {
+        display: none;     
+    }
+    & div:nth-child(1 of [class^="sectionDivider"]) {
+        display: none;
+    }
 }
 
 
