@@ -57,3 +57,12 @@ span[class^="botText"] {
     position: relative;
     top: 1px;
 }
+
+/* deADHD the top bar "Add Friend" button in the DM section */
+div[class^="tabBar"] div[class*="addFriend"] {
+    background-color: unset !important;
+    color: var(--interactive-normal) !important;
+    &:hover {
+        background-color: var(--background-modifier-hover) !important;
+    }
+}

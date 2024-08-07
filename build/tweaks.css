@@ -25,8 +25,8 @@ div[class^="userPopoutInner"] > div:nth-child(1) {
   display: none;
 }
 /* "Add Note" button */
-div[aria-label="Add Note"] {
-  visibility: hidden;
+button[aria-label="Add Note"] {
+  display: none;
 }
 /* message section */
 div[class*="userProfileInner"] > div[class^="body"] {
@@ -42,6 +42,35 @@ button[class^="viewFullBio"] {
 /* new status design */
 div[class^="visibleContainer"],
 div[class^="invisibleContainer"] {
+  display: none;
+}
+/* [ STRICT ]: "Member Since" and "Friends Since" icons */
+div[class^="memberSince"] svg {
+  display: none;
+}
+div[class^="memberSince"] div[class^="icon"] {
+  display: none;
+}
+/* "Friends" banner button */
+div[class*="userProfileInner"] > div[class^="wrapper"] {
+  gap: 4px;
+}
+div[class*="userProfileInner"] button[aria-label="Friends"] {
+  display: none;
+}
+/* [ STRICT ]: "Message" and "Add Friend" icons */
+button[aria-label="Message"][class*="sizeSmall"] svg {
+  display: none;
+}
+button[aria-label="Add Friend"] svg {
+  display: none;
+}
+/* "Connections" profile section */
+section:has(div[class^="connectedAccounts"], div[class^="note"]) {
+  display: none;
+}
+/* "No servers in common" and "No friend groups in common" images */
+div[class^="emptyIcon"] {
   display: none;
 }
 /* ### SERVERS AND CHANNELS ### */
@@ -104,6 +133,32 @@ div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
 div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div[class^="diversitySelector"] {
   display: none;
 }
+/* "Store" and "Shop" from DM section */
+li:has(a[href="/store"], a[href="/shop"]) {
+  display: none;
+}
+/* "Message" button opposite of profile picture */
+div[class^="actionButton"][aria-label="Message"] {
+  display: none;
+}
+/* redundant search bar */
+div[class^="peopleColumn"] > div[class^="searchBar"] {
+  display: none;
+}
+/* "Friends" top bar icon */
+main[aria-label="Friends"] section[role="navigation"] svg {
+  display: none;
+}
+/* Wumpus image and text in empty sections */
+div[class^="friendsEmpty"] div[class^="image"] {
+  display: none;
+}
+div[class^="friendsEmpty"] div[class^="image"] ~ div {
+  overflow: hidden;
+  width: 255px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
 /* Cosmetic changes */
 /* ### USER POPOUTS ### */
 /* old status design (requires enabling it first) */
@@ -144,4 +199,12 @@ div[class*="userProfileInner"] div[class^="body"] > div[class*="overlayBackgroun
 span[class^="botText"] {
   position: relative;
   top: 1px;
+}
+/* deADHD the top bar "Add Friend" button in the DM section */
+div[class^="tabBar"] div[class*="addFriend"] {
+  background-color: unset !important;
+  color: var(--interactive-normal) !important;
+}
+div[class^="tabBar"] div[class*="addFriend"]:hover {
+  background-color: var(--background-modifier-hover) !important;
 }
