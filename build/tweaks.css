@@ -1,6 +1,6 @@
 /**
  * @name CSS Tweaks
- * @version 1.1.0
+ * @version 1.2.1
  * @description A collection of small but useful CSS tweaks.
 **/
 /* Unnecessary UI element removal */
@@ -115,9 +115,34 @@ ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) 
 ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) {
   display: none;
 }
+/* server banner image */
+div[class^="animatedContainer"]:has( > div[class*="bannerImage"]),
+div[style="height: 84px;"] {
+  display: none;
+}
+/* server icon */
+div[class^="guildIconV2Container"] {
+  display: none;
+}
+/* server info expand dropdown arrow */
+div[class^="guildIconV2Container"] ~ div[class^="headerChildren"] {
+  display: none;
+}
+/* channel category expand dropdown arrow */
+div[aria-label$="(category)"] svg[class^="icon"] {
+  display: none;
+}
+/* "Invite to Server" channel hover button */
+div[aria-label="Invite to Server"] > svg {
+  display: none;
+}
 /* ### MESSAGE FEED ### */
 /* typing dots */
 div[class^="typingDots"] svg[class^="ellipsis"] {
+  display: none;
+}
+/* app launcher */
+div[class^="channelAppLauncher"] {
   display: none;
 }
 /* ### MISCELLANEOUS ### */
@@ -150,15 +175,72 @@ main[aria-label="Friends"] section[role="navigation"] svg {
   display: none;
 }
 /* Wumpus image and text in empty sections */
+div[class^="friendsEmpty"] {
+  height: 100%;
+}
+div[class^="friendsEmpty"] > div {
+  flex: 1;
+}
 div[class^="friendsEmpty"] div[class^="image"] {
   display: none;
 }
-div[class^="friendsEmpty"] div[class^="image"] ~ div {
-  overflow: hidden;
-  width: 255px;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+div[class^="friendsEmpty"] div[class^="image"] ~ div::after {
+  content: "Nothing here.";
+  font-size: 16px;
+  line-height: 20px;
+  text-align: center;
+  color: var(--text-muted);
 }
+div[class^="friendsEmpty"] div[class^="image"] ~ div > div[class^="text"] {
+  display: none;
+}
+/* "Add Friend" form description text */
+div[class^="peopleColumn"] div[class*="formText"] {
+  display: none;
+}
+/* "Active Now" section */
+div[class^="nowPlayingColumn"] {
+  display: none;
+}
+/* top bar section titles */
+div[class^="peopleColumn"] > div[class^="sectionTitle"] {
+  display: none;
+}
+div[class^="peopleList"] :nth-child(1 of [class^="peopleListItem"]) {
+  border-top: none;
+}
+/* user status texts */
+div[class^="peopleListItem"] div[class^="subtext"] {
+  display: none;
+}
+/* ### USER AREA PANEL ### */
+/* Krisp icon */
+button[aria-label="Noise Suppression powered by Krisp"] {
+  display: none;
+}
+/* new activity pill */
+button[aria-label="Start an Activity"] span[class^="dot"] {
+  display: none;
+}
+/* user online status & username subtext panel */
+section[aria-label="User area"] div[class^="panelSubtextContainer"] {
+  display: none;
+}
+/* "Copy username" button in the self profile popup */
+div[class^="nicknameIcons"] {
+  display: none;
+}
+/* ### MESSAGE FEED ### */
+/* "Channel Action" icons */
+div[aria-label="Channel Actions"] svg[class^="optionIcon"] {
+  display: none;
+}
+/* ### MULTI CATEGORY ### */
+/* [STRICT]: role icons */
+img[aria-label^="Role icon"] {
+  display: none;
+}
+/* ### CHANNEL HEADER */
 /* Cosmetic changes */
 /* ### USER POPOUTS ### */
 /* old status design (requires enabling it first) */
@@ -193,6 +275,15 @@ div[aria-label="User Badges"] {
 /* remove user profile info border */
 div[class*="userProfileInner"] div[class^="body"] > div[class*="overlayBackground"] {
   border: none !important;
+}
+/* old activity elapsed time */
+div[class^="badgeContainer"] > :nth-child(1) {
+  display: none;
+}
+div[class^="badgeContainer"] div[class*="timestamp"] {
+  font-weight: inherit;
+  color: var(--text-normal) !important;
+  font-family: var(--font-primary);
 }
 /* ### MISCELLANEOUS ### */
 /* move text inside of OP and APP tags down */

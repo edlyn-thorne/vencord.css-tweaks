@@ -46,6 +46,17 @@ div[class^="body"] > div[class*="overlayBackground"] {
     border: none !important;
 }
 
+/* old activity elapsed time */
+div[class^="badgeContainer"] {
+    & > :nth-child(1) {
+        display: none;
+    }
+    & div[class*="timestamp"] {
+        font-weight: inherit;
+        color: var(--text-normal) !important;
+        font-family: var(--font-primary);
+    }
+}
 
 
 /* ### MISCELLANEOUS ### */
