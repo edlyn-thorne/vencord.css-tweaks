@@ -1,9 +1,9 @@
 /**
  * @name CSS Tweaks
+ * @author Edlyn Thorne
  * @version 1.2.1
  * @description A collection of small but useful CSS tweaks.
 **/
-/* Unnecessary UI element removal */
 /* ### USER POPOUTS ### */
 /* avatar decorations */
 img[class^="avatarDecoration"],
@@ -241,7 +241,6 @@ img[aria-label^="Role icon"] {
   display: none;
 }
 /* ### CHANNEL HEADER */
-/* Cosmetic changes */
 /* ### USER POPOUTS ### */
 /* old status design (requires enabling it first) */
 /* @import url("https://raw.githubusercontent.com/Bitslayn/RepluggedAddons/main/themes/btw.bitslayn.inlineStatus/raw/main.css"); */
