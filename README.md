@@ -18,4 +18,4 @@ It's literally a `less` file I'm sure you can figure it out if for some reason y
 
 ## Version
 
-`v1.0.0`
+~~`v1.0.0`~~ I give up on versioning this.
