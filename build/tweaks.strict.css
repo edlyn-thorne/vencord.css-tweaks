@@ -118,6 +118,10 @@ div[class^="guildIconV2Container"] ~ div[class^="headerChildren"] {
 div[aria-label$="(category)"] svg[class^="icon"] {
   display: none;
 }
+/* "New Unreads" popup */
+div[class^="positionedContainer"]:has(svg[class^="unreadIcon"]) {
+  display: none;
+}
 /* "Discover Servers" button */
 div[aria-label="Explore Discoverable Servers"] {
   display: none;

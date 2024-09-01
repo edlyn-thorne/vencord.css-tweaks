@@ -75,6 +75,14 @@ div[aria-label$="(category)"] svg[class^="icon"] {
     display: none;
 }
 
+/* "New Unreads" popup */
+
+// "New Unreads" popup that goes off when an unread channel is present outside
+// of the current channel list viewport.
+div[class^="positionedContainer"]:has(svg[class^="unreadIcon"]) {
+    display: none;
+}
+
 /* "Discover Servers" button */
 
 // A button at the end of the server list that nobody ever uses.
