@@ -98,7 +98,7 @@ div[aria-label="Invite to Server"] > svg {
 ul[aria-label="Channels"] div[data-list-item-id*="boosts"] {
   display: none;
 }
-/* [EXPERIMENTAL] "Suggested" channel section */
+/* [ UNSTABLE ] "Suggested" channel section */
 ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) ~ :not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"])):not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"]) ~ *) {
   display: none;
 }
