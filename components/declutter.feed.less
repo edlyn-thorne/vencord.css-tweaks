@@ -26,6 +26,13 @@ div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
     }
 }
 
+/* input box for restricted channels */
+
+// Redundant input box for channels you can't send messages in.
+div[class^="channelTextArea"]:has([aria-label^="You do not have permission"]) {
+    display: none;
+}
+
 /* [ STRICT ] */
 
 & when (@strict = true) {

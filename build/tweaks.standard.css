@@ -115,6 +115,10 @@ div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
 div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div[class^="diversitySelector"] {
   display: none;
 }
+/* input box for restricted channels */
+div[class^="channelTextArea"]:has([aria-label^="You do not have permission"]) {
+  display: none;
+}
 /* [ STRICT ] */
 /* top DM menu sections */
 li:has(a[href="/store"], a[href="/shop"]) {
