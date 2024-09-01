@@ -1,75 +1,16 @@
-
-
-
-/* ### USER POPOUTS ### */
-
-
-
-/* old status design (requires enabling it first) */
-/* @import url("https://raw.githubusercontent.com/Bitslayn/RepluggedAddons/main/themes/btw.bitslayn.inlineStatus/raw/main.css"); */
-
-/* increase description line clamp limit */
-div[class^="descriptionClamp"] {
-    -webkit-line-clamp: 10 !important;
-    max-height: unset;
-} 
-
-/* increase rounding on role pills */
-div[class*="role"][class*="pill"],
-div[aria-label="View All Roles"] > div,
-div[aria-label="View Permissions"] > button,
-button[aria-label="Add Role"] {
-    border-radius: calc(var(--radius-xs) * 4);
-}
-
-button[aria-label="Add Role"] {
-    aspect-ratio: 1 / 1;
-}
-
-/* condensed form */
-div[class*="userProfileInner"] {
-    padding-bottom: 0px;
-    & > footer {
-        padding-top: 8px;
-    }
-}
-
-/* remove profile badge border and background */
-div[aria-label="User Badges"] {
-    border: none;
-    background: none !important;
-}
-
-/* remove user profile info border */
-div[class*="userProfileInner"]
-div[class^="body"] > div[class*="overlayBackground"] {
-    border: none !important;
-}
-
-/* old activity elapsed time */
-div[class^="badgeContainer"] {
-    & > :nth-child(1) {
-        display: none;
-    }
-    & div[class*="timestamp"] {
-        font-weight: inherit;
-        color: var(--text-normal) !important;
-        font-family: var(--font-primary);
-    }
-}
-
-
-/* ### MISCELLANEOUS ### */
-
-
+@import "redesign.users.less";
 
 /* move text inside of OP and APP tags down */
+
+// Normally off by a couple of pixels.
 span[class^="botText"] {
     position: relative;
     top: 1px;
 }
 
 /* deADHD the top bar "Add Friend" button in the DM section */
+
+// "Add Friend" button is normally obnoxious green.
 div[class^="tabBar"] div[class*="addFriend"] {
     background-color: unset !important;
     color: var(--interactive-normal) !important;

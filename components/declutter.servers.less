@@ -1,0 +1,117 @@
+/* unread pills */
+
+// Little white dots that appear next to an unread channel or server.
+li[class^="containerDefault"] div[class^="unread"] {
+    display: none;
+}
+
+div[class^="listItem"] div[class^="pill"] {
+    display: none;
+}
+
+/* "Create Invite" button */
+
+// A button to the right of the channel name,
+// this functionality can be accessed via the context menu.
+div[class^="iconItem"][aria-label="Create Invite"] {
+    display: none !important;
+}
+
+div[aria-label="Invite to Server"] > svg {
+    display: none;
+}
+
+/* server boost progress bar */
+
+// A bar displayed above the channel list
+// indicating boost level progress for a server.
+ul[aria-label="Channels"] div[data-list-item-id*="boosts"] {
+    display: none;
+}
+
+/* [EXPERIMENTAL] "Suggested" channel section */
+
+// Channel section displaying channels that are not subscribed to.
+// This snippet is experimental, below CSS rules do not bind to said suggested
+// section but instead assume that whatever is between the first and second
+// divider bars are to hidden. Will eventually be broken by new Discord UI. 
+ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) {
+    & div:nth-child(1 of [class^="sectionDivider"]) ~
+    :not(
+        ul[aria-label="Channels"] >
+        div:nth-child(2 of [class^="sectionDivider"])
+    ):not(
+        ul[aria-label="Channels"] >
+        div:nth-child(2 of [class^="sectionDivider"]) ~
+        *
+    ) {
+        display: none;     
+    }
+    & div:nth-child(1 of [class^="sectionDivider"]) {
+        display: none;
+    }
+}
+
+/* server icon */
+
+// Little icon next to the server name.
+div[class^="guildIconV2Container"] {
+    display: none;
+}
+
+/* server info expand dropdown arrow */
+
+// Dropdown arrow for the server context menu. Can be accessed by
+// just clicking the server name instead.
+div[class^="guildIconV2Container"] ~ div[class^="headerChildren"] {
+    display: none;
+}
+
+/* channel category expand dropdown arrow */
+
+// Dropdown arrow for channel categories. Can be accessed by
+// just clicking the category name instead.
+div[aria-label$="(category)"] svg[class^="icon"] {
+    display: none;
+}
+
+/* "Discover Servers" button */
+
+// A button at the end of the server list that nobody ever uses.
+div[aria-label="Explore Discoverable Servers"] {
+    display: none;
+}
+
+/* channel toolbar icons */
+
+// Top right channel settings buttons, can be accessed via the context menu.
+div[class^="iconWrapper"][aria-label="Help"],
+div[class^="iconWrapper"][aria-label="Notification Settings"] {
+    display: none;
+}
+
+/* [ STRICT ] */
+
+& when(@strict = true) {
+
+    /* server banner image */
+
+    // Custom image uploaded as server banner.
+    div[class^="animatedContainer"]:has( > div[class*="bannerImage"]),
+    div[style="height: 84px;"] {
+        display:none;
+    }
+    
+    /* activity badges */
+
+    // Icons that indicate if someone is streaming on a server
+    // or if an event is happening.
+    div[class^="upperBadge"] {
+        display: none;
+    }
+
+    div[class^="listItem"] use[href$="upper_badge_masks"] {
+        display: none;
+    }
+
+}

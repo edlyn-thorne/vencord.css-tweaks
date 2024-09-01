@@ -1,34 +1,32 @@
 /**
- * @name CSS Tweaks
+ * @name CSS Tweaks (Strict)
  * @author Edlyn Thorne
- * @version 1.2.1
  * @description A collection of small but useful CSS tweaks.
 **/
-/* ### USER POPOUTS ### */
 /* avatar decorations */
 img[class^="avatarDecoration"],
 svg[class^="avatarDecoration"] {
-  visibility: hidden;
+  display: none;
 }
 /* profile effects */
 div[class^="profileEffects"] {
-  visibility: hidden;
+  display: none;
 }
-/* unnecessary badges */
-div[aria-label="User Badges"] > div[aria-label^="HypeSquad"],
+/* cosmetic user badges */
+div[aria-label^="HypeSquad"],
 div[aria-label="Early Supporter"],
 div[aria-label="Completed a Quest"] {
   display: none;
 }
 /* quick actions */
-div[class^="userPopoutInner"] > div:nth-child(1) {
+div[class^="userPopoutInner"] > :nth-child(1) {
   display: none;
 }
 /* "Add Note" button */
 button[aria-label="Add Note"] {
   display: none;
 }
-/* message section */
+/* "Message User" section */
 div[class*="userProfileInner"] > div[class^="body"] {
   padding-bottom: 16px;
 }
@@ -39,26 +37,32 @@ div[class*="userProfileInner"] > footer {
 button[class^="viewFullBio"] {
   display: none;
 }
+/* "No servers in common" and "No friend groups in common" images */
+div[class^="emptyIcon"] {
+  display: none;
+}
+/* Krisp icon */
+button[aria-label="Noise Suppression powered by Krisp"] {
+  display: none;
+}
+/* new activity pill */
+button[aria-label="Start an Activity"] span[class^="dot"] {
+  display: none;
+}
+/* [ STRICT ] */
 /* new status design */
 div[class^="visibleContainer"],
 div[class^="invisibleContainer"] {
   display: none;
 }
-/* [ STRICT ]: "Member Since" and "Friends Since" icons */
+/* "Member Since" and "Friends Since" icons */
 div[class^="memberSince"] svg {
   display: none;
 }
 div[class^="memberSince"] div[class^="icon"] {
   display: none;
 }
-/* "Friends" banner button */
-div[class*="userProfileInner"] > div[class^="wrapper"] {
-  gap: 4px;
-}
-div[class*="userProfileInner"] button[aria-label="Friends"] {
-  display: none;
-}
-/* [ STRICT ]: "Message" and "Add Friend" icons */
+/* "Message" and "Add Friend" icons */
 button[aria-label="Message"][class*="sizeSmall"] svg {
   display: none;
 }
@@ -69,55 +73,37 @@ button[aria-label="Add Friend"] svg {
 section:has(div[class^="connectedAccounts"], div[class^="note"]) {
   display: none;
 }
-/* "No servers in common" and "No friend groups in common" images */
-div[class^="emptyIcon"] {
+/* user online status & username subtext */
+section[aria-label="User area"] div[class^="panelSubtextContainer"] {
   display: none;
 }
-/* ### SERVERS AND CHANNELS ### */
+/* "Copy username" button */
+div[class^="nicknameIcons"] {
+  display: none;
+}
 /* unread pills */
 li[class^="containerDefault"] div[class^="unread"] {
-  visibility: hidden;
+  display: none;
 }
 div[class^="listItem"] div[class^="pill"] {
-  visibility: hidden;
-}
-/* unread pills server whitelist */
-/*
-    div[class^="listItem"]:has(
-        div[data-list-item-id*="<serverID>"]
-    ) div[class^="pill"] {
-        visibility: visible;
-    }
-*/
-/* activity badges */
-div[class^="upperBadge"] {
-  visibility: hidden;
-}
-div[class^="listItem"] use[href$="upper_badge_masks"] {
-  visibility: hidden;
-}
-/* "Discover Servers" button */
-div[aria-label="Explore Discoverable Servers"] {
   display: none;
 }
 /* "Create Invite" button */
 div[class^="iconItem"][aria-label="Create Invite"] {
   display: none !important;
 }
-/* server boost bar above the channel list */
-ul[aria-label="Channels"] > li > div[class^="container"][data-list-item-id*="boosts"] {
+div[aria-label="Invite to Server"] > svg {
   display: none;
 }
-/* "Suggested" channel section */
+/* server boost progress bar */
+ul[aria-label="Channels"] div[data-list-item-id*="boosts"] {
+  display: none;
+}
+/* [EXPERIMENTAL] "Suggested" channel section */
 ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) ~ :not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"])):not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"]) ~ *) {
   display: none;
 }
 ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) {
-  display: none;
-}
-/* server banner image */
-div[class^="animatedContainer"]:has( > div[class*="bannerImage"]),
-div[style="height: 84px;"] {
   display: none;
 }
 /* server icon */
@@ -132,11 +118,28 @@ div[class^="guildIconV2Container"] ~ div[class^="headerChildren"] {
 div[aria-label$="(category)"] svg[class^="icon"] {
   display: none;
 }
-/* "Invite to Server" channel hover button */
-div[aria-label="Invite to Server"] > svg {
+/* "Discover Servers" button */
+div[aria-label="Explore Discoverable Servers"] {
   display: none;
 }
-/* ### MESSAGE FEED ### */
+/* channel toolbar icons */
+div[class^="iconWrapper"][aria-label="Help"],
+div[class^="iconWrapper"][aria-label="Notification Settings"] {
+  display: none;
+}
+/* [ STRICT ] */
+/* server banner image */
+div[class^="animatedContainer"]:has( > div[class*="bannerImage"]),
+div[style="height: 84px;"] {
+  display: none;
+}
+/* activity badges */
+div[class^="upperBadge"] {
+  display: none;
+}
+div[class^="listItem"] use[href$="upper_badge_masks"] {
+  display: none;
+}
 /* typing dots */
 div[class^="typingDots"] svg[class^="ellipsis"] {
   display: none;
@@ -145,20 +148,22 @@ div[class^="typingDots"] svg[class^="ellipsis"] {
 div[class^="channelAppLauncher"] {
   display: none;
 }
-/* ### MISCELLANEOUS ### */
-/* channel toolbar icons */
-div[class^="iconWrapper"][aria-label="Help"],
-div[class^="iconWrapper"][aria-label="Notification Settings"] {
-  display: none;
+div[class^="jumpToPresentBar"] {
+  right: 16px;
 }
-/* emote menu diversity selector */
+/* emote diversity selector */
 div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
   margin-right: 0px;
 }
 div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div[class^="diversitySelector"] {
   display: none;
 }
-/* "Store" and "Shop" from DM section */
+/* [ STRICT ] */
+/* input box placeholder */
+div[class^="textArea"] div[class^="placeholder"] {
+  display: none;
+}
+/* top DM menu sections */
 li:has(a[href="/store"], a[href="/shop"]) {
   display: none;
 }
@@ -166,40 +171,17 @@ li:has(a[href="/store"], a[href="/shop"]) {
 div[class^="actionButton"][aria-label="Message"] {
   display: none;
 }
-/* redundant search bar */
-div[class^="peopleColumn"] > div[class^="searchBar"] {
+/* "Create DM" option next to the "Direct Mesages" category */
+div[class^="privateChannelRecipientsInviteButtonIcon"] {
   display: none;
 }
-/* "Friends" top bar icon */
-main[aria-label="Friends"] section[role="navigation"] svg {
-  display: none;
-}
-/* Wumpus image and text in empty sections */
-div[class^="friendsEmpty"] {
-  height: 100%;
-}
-div[class^="friendsEmpty"] > div {
-  flex: 1;
-}
-div[class^="friendsEmpty"] div[class^="image"] {
-  display: none;
-}
-div[class^="friendsEmpty"] div[class^="image"] ~ div::after {
-  content: "Nothing here.";
-  font-size: 16px;
-  line-height: 20px;
-  text-align: center;
-  color: var(--text-muted);
-}
-div[class^="friendsEmpty"] div[class^="image"] ~ div > div[class^="text"] {
+/* Wumpus imagery */
+div[class^="friendsEmpty"] div[class^="image"],
+div[class^="friendsEmpty"] div[class^="text"] {
   display: none;
 }
 /* "Add Friend" form description text */
 div[class^="peopleColumn"] div[class*="formText"] {
-  display: none;
-}
-/* "Active Now" section */
-div[class^="nowPlayingColumn"] {
   display: none;
 }
 /* top bar section titles */
@@ -209,42 +191,25 @@ div[class^="peopleColumn"] > div[class^="sectionTitle"] {
 div[class^="peopleList"] :nth-child(1 of [class^="peopleListItem"]) {
   border-top: none;
 }
+/* [ STRICT ] */
+/* DM users search bar */
+div[class^="peopleColumn"] > div[class^="searchBar"] {
+  display: none;
+}
+/* "Active Now" section */
+div[class^="nowPlayingColumn"] {
+  display: none;
+}
 /* user status texts */
 div[class^="peopleListItem"] div[class^="subtext"] {
   display: none;
 }
-/* ### USER AREA PANEL ### */
-/* Krisp icon */
-button[aria-label="Noise Suppression powered by Krisp"] {
-  display: none;
-}
-/* new activity pill */
-button[aria-label="Start an Activity"] span[class^="dot"] {
-  display: none;
-}
-/* user online status & username subtext panel */
-section[aria-label="User area"] div[class^="panelSubtextContainer"] {
-  display: none;
-}
-/* "Copy username" button in the self profile popup */
-div[class^="nicknameIcons"] {
-  display: none;
-}
-/* ### MESSAGE FEED ### */
-/* "Channel Action" icons */
-div[aria-label="Channel Actions"] svg[class^="optionIcon"] {
-  display: none;
-}
-/* ### MULTI CATEGORY ### */
-/* [STRICT]: role icons */
+/* [ STRICT ] */
+/* role icons */
 img[aria-label^="Role icon"] {
   display: none;
 }
-/* ### CHANNEL HEADER */
-/* ### USER POPOUTS ### */
-/* old status design (requires enabling it first) */
-/* @import url("https://raw.githubusercontent.com/Bitslayn/RepluggedAddons/main/themes/btw.bitslayn.inlineStatus/raw/main.css"); */
-/* increase description line clamp limit */
+/* increase bio line clamp limit */
 div[class^="descriptionClamp"] {
   -webkit-line-clamp: 10 !important;
   max-height: unset;
@@ -253,18 +218,18 @@ div[class^="descriptionClamp"] {
 div[class*="role"][class*="pill"],
 div[aria-label="View All Roles"] > div,
 div[aria-label="View Permissions"] > button,
-button[aria-label="Add Role"] {
+button[aria-label="Add Role"],
+div[aria-label="Collapse Roles"] > div {
   border-radius: calc(var(--radius-xs) * 4);
 }
+div[aria-label="View Permissions"] > button,
+div[aria-label="Collapse Roles"] > div,
 button[aria-label="Add Role"] {
   aspect-ratio: 1 / 1;
 }
-/* condensed form */
-div[class*="userProfileInner"] {
+/* remove bottom padding from full user popup */
+div[class*="userProfileInner"] > div[class^="body"] {
   padding-bottom: 0px;
-}
-div[class*="userProfileInner"] > footer {
-  padding-top: 8px;
 }
 /* remove profile badge border and background */
 div[aria-label="User Badges"] {
@@ -284,7 +249,6 @@ div[class^="badgeContainer"] div[class*="timestamp"] {
   color: var(--text-normal) !important;
   font-family: var(--font-primary);
 }
-/* ### MISCELLANEOUS ### */
 /* move text inside of OP and APP tags down */
 span[class^="botText"] {
   position: relative;

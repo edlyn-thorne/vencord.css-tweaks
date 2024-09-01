@@ -1,0 +1,40 @@
+/* typing dots */
+
+// Animated dots indicating user's typing. Usernames are preserved.
+div[class^="typingDots"] svg[class^="ellipsis"] {
+    display: none;
+}
+
+/* app launcher */
+
+// App launcher button to the right of the message input.
+div[class^="channelAppLauncher"] {
+    display: none;
+}
+
+div[class^="jumpToPresentBar"] {
+    right: 16px;
+}
+
+/* emote diversity selector */
+
+// Skin color selector menu for human emotes.
+div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
+    margin-right: 0px;
+    & ~ div[class^="diversitySelector"] {
+        display: none;
+    }
+}
+
+/* [ STRICT ] */
+
+& when (@strict = true) {
+
+    /* input box placeholder */
+
+    // Placeholder "Message <channel-name>".
+    div[class^="textArea"] div[class^="placeholder"] {
+        display: none;
+    }
+
+}

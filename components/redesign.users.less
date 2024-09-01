@@ -1,0 +1,61 @@
+/* increase bio line clamp limit */
+
+// Expands bio to be 10 lines long before clamping.
+div[class^="descriptionClamp"] {
+    -webkit-line-clamp: 10 !important;
+    max-height: unset;
+}
+
+/* increase rounding on role pills */
+
+// Return to rounded role pills.
+div[class*="role"][class*="pill"],
+div[aria-label="View All Roles"] > div,
+div[aria-label="View Permissions"] > button,
+button[aria-label="Add Role"],
+div[aria-label="Collapse Roles"] > div {
+    border-radius: calc(var(--radius-xs) * 4);
+}
+
+div[aria-label="View Permissions"] > button,
+div[aria-label="Collapse Roles"] > div,
+button[aria-label="Add Role"] {
+    aspect-ratio: 1 / 1;
+}
+
+/* remove bottom padding from full user popup */
+
+// Unecessary padding.
+div[class*="userProfileInner"] > div[class^="body"] {
+    padding-bottom: 0px;
+}
+
+/* remove profile badge border and background */
+
+// Profile badges are normally separated by a custom box they are in.
+div[aria-label="User Badges"] {
+    border: none;
+    background: none !important;
+}
+
+/* remove user profile info border */
+
+// Thin border around user's bio & etc. section.
+div[class*="userProfileInner"]
+div[class^="body"] > div[class*="overlayBackground"] {
+    border: none !important;
+}
+
+/* old activity elapsed time */
+
+// Remove obnoxious green elapsed time in favor of the old plain text.
+div[class^="badgeContainer"] {
+    & > :nth-child(1) {
+        display: none;
+    }
+    & div[class*="timestamp"] {
+        font-weight: inherit;
+        color: var(--text-normal) !important;
+        font-family: var(--font-primary);
+    }
+}

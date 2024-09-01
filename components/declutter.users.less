@@ -1,0 +1,133 @@
+/* avatar decorations */
+
+// Custom frames around a user's avatar.
+img[class^="avatarDecoration"], svg[class^="avatarDecoration"] {
+    display: none;
+}
+
+/* profile effects */
+
+// Custom animations that play when a profile is opened.
+div[class^="profileEffects"] {
+    display: none;
+}
+
+/* cosmetic user badges */ 
+
+// Badges that serve no "practical" purpose.
+div[aria-label^="HypeSquad"],
+div[aria-label="Early Supporter"],
+div[aria-label="Completed a Quest"] {
+    display: none;
+}
+
+/* quick actions */
+
+// A group of buttons located on top of a user's banner.
+// All quick actions functions are accessable from a user's context menu.
+div[class^="userPopoutInner"] > :nth-child(1) {
+    display: none;
+}
+
+/* "Add Note" button */
+
+// User notes.
+button[aria-label="Add Note"] {
+    display: none;
+}
+
+/* "Message User" section */
+
+// The message box inside of a user popout.
+div[class*="userProfileInner"] {
+    & > div[class^="body"] {
+        padding-bottom: 16px;
+    }
+    & > footer {
+        display: none;
+    }
+}
+
+/* "View Full Bio" button */
+
+// Redundant with the expanded bio rule,
+// refer to the redesign sheet for more info.
+button[class^="viewFullBio"] {
+    display: none;
+}
+
+/* "No servers in common" and "No friend groups in common" images */
+
+// Images on the main user profile popup.
+div[class^="emptyIcon"] {
+    display: none;
+}
+
+/* Krisp icon */
+
+// Icon indicating Krisp noise suppression.
+button[aria-label="Noise Suppression powered by Krisp"] {
+    display: none;
+}
+
+/* new activity pill */
+
+// Little dot indicating a new activity added.
+button[aria-label="Start an Activity"] span[class^="dot"] {
+    display: none;
+}
+
+/* [ STRICT ] */
+
+& when (@strict = true) {
+
+    /* new status design */
+
+    // I hate it, so I hide it completely.
+    div[class^="visibleContainer"], div[class^="invisibleContainer"] {
+        display: none;
+    }
+
+    /* "Member Since" and "Friends Since" icons */
+
+    // Icons on the main user profile popup.
+    div[class^="memberSince"] {
+        & svg {
+            display: none;
+        }
+        & div[class^="icon"] {
+            display: none;
+        }
+    }
+
+    /* "Message" and "Add Friend" icons */
+
+    // Icons on the main user profile popup.
+    button[aria-label="Message"][class*="sizeSmall"] svg {
+        display: none;
+    }
+    button[aria-label="Add Friend"] svg {
+        display: none;
+    }
+
+    /* "Connections" profile section */
+
+    // User's connected accounts.
+    section:has(div[class^="connectedAccounts"], div[class^="note"]) {
+        display: none;
+    }
+
+    /* user online status & username subtext */
+
+    // Panel that displays current user's online state and status on hover.
+    section[aria-label="User area"] div[class^="panelSubtextContainer"] {
+        display: none;
+    }
+
+    /* "Copy username" button */
+
+    // A button next to the current user's profile popup.
+    div[class^="nicknameIcons"] {
+        display: none;
+    }
+}

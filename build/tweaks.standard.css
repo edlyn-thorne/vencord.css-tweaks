@@ -1,0 +1,201 @@
+/**
+ * @name CSS Tweaks (Standard)
+ * @author Edlyn Thorne
+ * @description A collection of small but useful CSS tweaks.
+**/
+/* avatar decorations */
+img[class^="avatarDecoration"],
+svg[class^="avatarDecoration"] {
+  display: none;
+}
+/* profile effects */
+div[class^="profileEffects"] {
+  display: none;
+}
+/* cosmetic user badges */
+div[aria-label^="HypeSquad"],
+div[aria-label="Early Supporter"],
+div[aria-label="Completed a Quest"] {
+  display: none;
+}
+/* quick actions */
+div[class^="userPopoutInner"] > :nth-child(1) {
+  display: none;
+}
+/* "Add Note" button */
+button[aria-label="Add Note"] {
+  display: none;
+}
+/* "Message User" section */
+div[class*="userProfileInner"] > div[class^="body"] {
+  padding-bottom: 16px;
+}
+div[class*="userProfileInner"] > footer {
+  display: none;
+}
+/* "View Full Bio" button */
+button[class^="viewFullBio"] {
+  display: none;
+}
+/* "No servers in common" and "No friend groups in common" images */
+div[class^="emptyIcon"] {
+  display: none;
+}
+/* Krisp icon */
+button[aria-label="Noise Suppression powered by Krisp"] {
+  display: none;
+}
+/* new activity pill */
+button[aria-label="Start an Activity"] span[class^="dot"] {
+  display: none;
+}
+/* [ STRICT ] */
+/* unread pills */
+li[class^="containerDefault"] div[class^="unread"] {
+  display: none;
+}
+div[class^="listItem"] div[class^="pill"] {
+  display: none;
+}
+/* "Create Invite" button */
+div[class^="iconItem"][aria-label="Create Invite"] {
+  display: none !important;
+}
+div[aria-label="Invite to Server"] > svg {
+  display: none;
+}
+/* server boost progress bar */
+ul[aria-label="Channels"] div[data-list-item-id*="boosts"] {
+  display: none;
+}
+/* [EXPERIMENTAL] "Suggested" channel section */
+ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) ~ :not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"])):not( ul[aria-label="Channels"] > div:nth-child(2 of [class^="sectionDivider"]) ~ *) {
+  display: none;
+}
+ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) div:nth-child(1 of [class^="sectionDivider"]) {
+  display: none;
+}
+/* server icon */
+div[class^="guildIconV2Container"] {
+  display: none;
+}
+/* server info expand dropdown arrow */
+div[class^="guildIconV2Container"] ~ div[class^="headerChildren"] {
+  display: none;
+}
+/* channel category expand dropdown arrow */
+div[aria-label$="(category)"] svg[class^="icon"] {
+  display: none;
+}
+/* "Discover Servers" button */
+div[aria-label="Explore Discoverable Servers"] {
+  display: none;
+}
+/* channel toolbar icons */
+div[class^="iconWrapper"][aria-label="Help"],
+div[class^="iconWrapper"][aria-label="Notification Settings"] {
+  display: none;
+}
+/* [ STRICT ] */
+/* typing dots */
+div[class^="typingDots"] svg[class^="ellipsis"] {
+  display: none;
+}
+/* app launcher */
+div[class^="channelAppLauncher"] {
+  display: none;
+}
+div[class^="jumpToPresentBar"] {
+  right: 16px;
+}
+/* emote diversity selector */
+div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] {
+  margin-right: 0px;
+}
+div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div[class^="diversitySelector"] {
+  display: none;
+}
+/* [ STRICT ] */
+/* top DM menu sections */
+li:has(a[href="/store"], a[href="/shop"]) {
+  display: none;
+}
+/* "Message" button opposite of profile picture */
+div[class^="actionButton"][aria-label="Message"] {
+  display: none;
+}
+/* "Create DM" option next to the "Direct Mesages" category */
+div[class^="privateChannelRecipientsInviteButtonIcon"] {
+  display: none;
+}
+/* Wumpus imagery */
+div[class^="friendsEmpty"] div[class^="image"],
+div[class^="friendsEmpty"] div[class^="text"] {
+  display: none;
+}
+/* "Add Friend" form description text */
+div[class^="peopleColumn"] div[class*="formText"] {
+  display: none;
+}
+/* top bar section titles */
+div[class^="peopleColumn"] > div[class^="sectionTitle"] {
+  display: none;
+}
+div[class^="peopleList"] :nth-child(1 of [class^="peopleListItem"]) {
+  border-top: none;
+}
+/* [ STRICT ] */
+/* [ STRICT ] */
+/* increase bio line clamp limit */
+div[class^="descriptionClamp"] {
+  -webkit-line-clamp: 10 !important;
+  max-height: unset;
+}
+/* increase rounding on role pills */
+div[class*="role"][class*="pill"],
+div[aria-label="View All Roles"] > div,
+div[aria-label="View Permissions"] > button,
+button[aria-label="Add Role"],
+div[aria-label="Collapse Roles"] > div {
+  border-radius: calc(var(--radius-xs) * 4);
+}
+div[aria-label="View Permissions"] > button,
+div[aria-label="Collapse Roles"] > div,
+button[aria-label="Add Role"] {
+  aspect-ratio: 1 / 1;
+}
+/* remove bottom padding from full user popup */
+div[class*="userProfileInner"] > div[class^="body"] {
+  padding-bottom: 0px;
+}
+/* remove profile badge border and background */
+div[aria-label="User Badges"] {
+  border: none;
+  background: none !important;
+}
+/* remove user profile info border */
+div[class*="userProfileInner"] div[class^="body"] > div[class*="overlayBackground"] {
+  border: none !important;
+}
+/* old activity elapsed time */
+div[class^="badgeContainer"] > :nth-child(1) {
+  display: none;
+}
+div[class^="badgeContainer"] div[class*="timestamp"] {
+  font-weight: inherit;
+  color: var(--text-normal) !important;
+  font-family: var(--font-primary);
+}
+/* move text inside of OP and APP tags down */
+span[class^="botText"] {
+  position: relative;
+  top: 1px;
+}
+/* deADHD the top bar "Add Friend" button in the DM section */
+div[class^="tabBar"] div[class*="addFriend"] {
+  background-color: unset !important;
+  color: var(--interactive-normal) !important;
+}
+div[class^="tabBar"] div[class*="addFriend"]:hover {
+  background-color: var(--background-modifier-hover) !important;
+}

@@ -1,0 +1,75 @@
+/* top DM menu sections */
+
+// "Shop" & "Nitro" sections.
+li:has(a[href="/store"], a[href="/shop"]) {
+    display: none;
+}
+
+/* "Message" button opposite of profile picture */
+
+// Can be accessed by.. literally clicking on the user.
+div[class^="actionButton"][aria-label="Message"] {
+    display: none;
+}
+
+/* "Create DM" option next to the "Direct Mesages" category */
+
+// Can be accessed via top right icon.
+div[class^="privateChannelRecipientsInviteButtonIcon"] {
+    display: none;
+}
+
+/* Wumpus imagery */
+
+// Pictures of Wumpus in empty sections.
+div[class^="friendsEmpty"] {
+    & div[class^="image"],
+      div[class^="text"] {
+        display: none;
+    }
+}
+
+/* "Add Friend" form description text */
+
+// Description above the username lookup input box.
+div[class^="peopleColumn"] div[class*="formText"] {
+    display: none;
+}
+
+/* top bar section titles */
+
+// Mostly numeric stats of a certain section, like friends or blocked count.
+div[class^="peopleColumn"] > div[class^="sectionTitle"] {
+    display: none;
+}
+
+div[class^="peopleList"] :nth-child(1 of [class^="peopleListItem"]) {
+    border-top: none;
+}
+
+/* [ STRICT ] */
+
+& when (@strict = true) {
+
+    /* DM users search bar */
+
+    // Search bar on top of the primary user list.
+    div[class^="peopleColumn"] > div[class^="searchBar"] {
+        display: none;
+    }
+
+    /* "Active Now" section */
+
+    // Feed of user's friend's activities.
+    div[class^="nowPlayingColumn"] {
+        display: none;
+    }
+
+    /* user status texts */
+
+    // Friend list status texts.
+    div[class^="peopleListItem"] div[class^="subtext"] {
+        display: none;
+    }
+
+}
