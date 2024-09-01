@@ -49,7 +49,6 @@ button[aria-label="Noise Suppression powered by Krisp"] {
 button[aria-label="Start an Activity"] span[class^="dot"] {
   display: none;
 }
-/* [ STRICT ] */
 /* new status design */
 div[class^="visibleContainer"],
 div[class^="invisibleContainer"] {
@@ -131,7 +130,6 @@ div[class^="iconWrapper"][aria-label="Help"],
 div[class^="iconWrapper"][aria-label="Notification Settings"] {
   display: none;
 }
-/* [ STRICT ] */
 /* server banner image */
 div[class^="animatedContainer"]:has( > div[class*="bannerImage"]),
 div[style="height: 84px;"] {
@@ -166,7 +164,6 @@ div[class^="emojiPicker"] > div[class^="header"] > div[class^="searchBar"] ~ div
 div[class^="channelTextArea"]:has([aria-label^="You do not have permission"]) {
   display: none;
 }
-/* [ STRICT ] */
 /* input box placeholder */
 div[class^="textArea"] div[class^="placeholder"] {
   display: none;
@@ -199,7 +196,6 @@ div[class^="peopleColumn"] > div[class^="sectionTitle"] {
 div[class^="peopleList"] :nth-child(1 of [class^="peopleListItem"]) {
   border-top: none;
 }
-/* [ STRICT ] */
 /* DM users search bar */
 div[class^="peopleColumn"] > div[class^="searchBar"] {
   display: none;
@@ -212,7 +208,6 @@ div[class^="nowPlayingColumn"] {
 div[class^="peopleListItem"] div[class^="subtext"] {
   display: none;
 }
-/* [ STRICT ] */
 /* role icons */
 img[aria-label^="Role icon"] {
   display: none;
