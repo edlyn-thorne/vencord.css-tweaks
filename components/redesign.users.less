@@ -26,7 +26,7 @@ button[aria-label="Add Role"] {
 /* remove bottom padding from full user popup */
 
 // Unecessary padding.
-div[class*="userProfileInner"] > div[class^="body"] {
+div[class*="userProfileInner"]:not([class*="biteSizeInner"])> div[class^="body"] {
     padding-bottom: 0px;
 }
 

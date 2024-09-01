@@ -232,7 +232,7 @@ button[aria-label="Add Role"] {
   aspect-ratio: 1 / 1;
 }
 /* remove bottom padding from full user popup */
-div[class*="userProfileInner"] > div[class^="body"] {
+div[class*="userProfileInner"]:not([class*="biteSizeInner"]) > div[class^="body"] {
   padding-bottom: 0px;
 }
 /* remove profile badge border and background */
