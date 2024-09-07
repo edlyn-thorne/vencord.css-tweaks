@@ -98,6 +98,15 @@ div[class^="iconWrapper"][aria-label="Notification Settings"] {
     display: none;
 }
 
+/* recent server member activity */
+
+// Display at the top of the channel member list.
+// Credit: @lusaffi (Discord ID: 797721161504653332)
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
+
 // [ STRICT ]
 
 & when(@strict = true) {

@@ -99,6 +99,11 @@ div[class^="iconWrapper"][aria-label="Help"],
 div[class^="iconWrapper"][aria-label="Notification Settings"] {
   display: none;
 }
+/* recent server member activity */
+[class*='membersGroup']:has([role=button]),
+[class*='member'] [class*='container']:has([class*='badges']) {
+  display: none;
+}
 /* typing dots */
 div[class^="typingDots"] svg[class^="ellipsis"] {
   display: none;
