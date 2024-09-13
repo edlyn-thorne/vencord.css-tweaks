@@ -29,29 +29,6 @@ ul[aria-label="Channels"] div[data-list-item-id*="boosts"] {
     display: none;
 }
 
-/* [ UNSTABLE ] "Suggested" channel section */
-
-// Channel section displaying channels that are not subscribed to.
-// This snippet is experimental, below CSS rules do not bind to said suggested
-// section but instead assume that whatever is between the first and second
-// divider bars are to hidden. Will eventually be broken by new Discord UI. 
-ul[aria-label="Channels"]:has( > div:nth-child(2 of [class^="sectionDivider"])) {
-    & div:nth-child(1 of [class^="sectionDivider"]) ~
-    :not(
-        ul[aria-label="Channels"] >
-        div:nth-child(2 of [class^="sectionDivider"])
-    ):not(
-        ul[aria-label="Channels"] >
-        div:nth-child(2 of [class^="sectionDivider"]) ~
-        *
-    ) {
-        display: none;     
-    }
-    & div:nth-child(1 of [class^="sectionDivider"]) {
-        display: none;
-    }
-}
-
 /* server icon */
 
 // Little icon next to the server name.
