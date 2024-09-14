@@ -1,0 +1,15 @@
+/* align channel header with message feed */
+
+// Makes member list take 100% of the viewport height.
+div[class^="chat"]:has(aside[class^="membersWrap"]) div[class^="subtitleContainer"] {
+    width: calc(100% - 240px);
+}
+
+div[class^="content"]:has(aside[class^="membersWrap"])::before {
+    right: 240px;
+}
+
+aside[class^="membersWrap"] {
+    top: -48px;
+    max-height: calc(100% + 48px);
+}
