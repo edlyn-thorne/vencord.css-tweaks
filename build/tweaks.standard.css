@@ -19,7 +19,7 @@ div[aria-label="Completed a Quest"] {
   display: none;
 }
 /* quick actions */
-div[class*="userProfileInner"] > :nth-child(1) {
+div[class*="userProfileInner"] > div:nth-child(1) {
   display: none;
 }
 /* "Add Note" button */
